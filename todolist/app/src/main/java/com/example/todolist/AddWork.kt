@@ -17,19 +17,17 @@ class AddWork : AppCompatActivity() {
         var mMonth: Int
         var mDay: Int */
 
-        val work = toDo.toString()
-        toDo.setText(" ")
+        val work = toDo_text.toString()
+        toDo_text.setText(" ")
 
-        val date: String = d_date.toString()
-        d_date.setText(" ")
+        val date: String = date_text.toString()
+        date_text.setText(" ")
 
-        save.setOnClickListener {
-            if(work != "null") {
+        save_btn.setOnClickListener {
                 val intent = Intent(this, MainActivity::class.java)
                 intent.putExtra("work", work)
                 intent.putExtra("date",date)
                 startActivity(intent)
-            }
 
         }
 

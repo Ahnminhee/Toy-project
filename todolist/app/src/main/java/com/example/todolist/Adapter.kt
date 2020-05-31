@@ -27,8 +27,8 @@ class Adapter(val workList: ArrayList<Work>) : RecyclerView.Adapter<Adapter.View
     }
 
     class ViewHolder(itemView: View) :RecyclerView.ViewHolder(itemView) {
-        val textViewWork = itemView.findViewById<TextView>(R.id.titleTodo)
-        val textViewDate = itemView.findViewById<TextView>(R.id.date)
+        val textViewWork = itemView.findViewById<TextView>(R.id.toDo_text)
+        val textViewDate = itemView.findViewById<TextView>(R.id.date_text)
 
     }
 

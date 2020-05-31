@@ -21,23 +21,35 @@ class MainActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this,LinearLayoutManager.VERTICAL, false)
 
         val mainWork = ArrayList<Work>()
-/*
         val fab: View = findViewById(R.id.fab)
         fab.setOnClickListener {
             val intent = Intent(this@MainActivity, AddWork::class.java)
             startActivityForResult(intent, 100)
+
+            var getWork = intent.getStringExtra("work")
+            var getPeriod = intent.getStringExtra("date")
+
+            mainWork.add(Work(getWork, getPeriod))
+
+            val adapter=Adapter(mainWork)
+
+            recyclerView.adapter = adapter
         }
 
-        var getWork = intent.getStringExtra("work")
-//        Toast.makeText(this, getWork,Toast.LENGTH_LONG).show()
+        /*Toast.makeText(this, getWork,Toast.LENGTH_LONG).show()
         if(intent.hasExtra("work")){
-            var getWork = intent.getStringExtra("work")
-            var getDate = intent.getStringExtra("date")
+
+
+
         } else{
-            Toast.makeText(this,"전달 받은게 없당 ㅎㅎ...", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"전달 받은 정보가 없습니다.", Toast.LENGTH_SHORT).show()
         }*/
 
-        mainWork.add(Work("집에 가기","2020.06.06"))
+
+
+
+
+
     }
 
 }
