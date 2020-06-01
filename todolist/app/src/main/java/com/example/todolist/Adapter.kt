@@ -18,7 +18,7 @@ class Adapter(val workList: ArrayList<Work>) : RecyclerView.Adapter<Adapter.View
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.item,parent,false)
+        val v = LayoutInflater.from(parent?.context).inflate(R.layout.item,parent,false)
         return ViewHolder(v)
     }
 
@@ -27,8 +27,8 @@ class Adapter(val workList: ArrayList<Work>) : RecyclerView.Adapter<Adapter.View
     }
 
     class ViewHolder(itemView: View) :RecyclerView.ViewHolder(itemView) {
-        val textViewWork = itemView.findViewById<TextView>(R.id.toDo_text)
-        val textViewDate = itemView.findViewById<TextView>(R.id.date_text)
+        val textViewWork = itemView.findViewById<TextView>(R.id.titleTodo)
+        val textViewDate = itemView.findViewById<TextView>(R.id.date)
 
     }
 

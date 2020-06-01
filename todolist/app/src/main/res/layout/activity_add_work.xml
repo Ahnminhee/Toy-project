@@ -6,30 +6,45 @@
     android:layout_height="match_parent"
     tools:context=".AddWork">
 
-    <EditText
-        android:id="@+id/toDo_text"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:inputType="textPersonName"
-        android:text="할 일: "
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="75dp"
+        android:text="할 일:"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@id/toDo_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <EditText
+        android:id="@+id/toDo_text"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:text="기간 :"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/date_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
     <EditText
         android:id="@+id/date_text"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:text = "기간: "
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toDo_text" />
 
     <Button
