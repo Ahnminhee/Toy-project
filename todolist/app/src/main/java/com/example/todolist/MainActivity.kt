@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -26,19 +25,20 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        var getWork= intent.getStringExtra("work").toString()
-        var getPeriod: String = intent.getStringExtra("date").toString()
+        var getWork= intent.getStringExtra("work")
+        var getPeriod= intent.getStringExtra("date")
 
-        Toast.makeText(this,getWork,Toast.LENGTH_LONG).show()
-        Toast.makeText(this,getPeriod,Toast.LENGTH_SHORT).show()
+        if(getWork == null || getPeriod == null) {
+            println("")
+        } else{
+            mainWork.add(Work(getWork,getPeriod))
 
-        mainWork.add(Work(getWork, getPeriod))
+            val adapter=Adapter(mainWork)
 
-        val adapter=Adapter(mainWork)
-        recyclerView.adapter = adapter
+            recyclerView.adapter = adapter
+
+        }
 
     }
-
-
 
 }

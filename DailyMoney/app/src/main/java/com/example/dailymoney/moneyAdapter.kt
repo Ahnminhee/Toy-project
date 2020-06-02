@@ -6,26 +6,26 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class Adapter(val moneyList: ArrayList<Money>): RecyclerView.Adapter<Adapter.ViewHolder>(){
+class moneyAdapter(val moneyList: ArrayList<Money>): RecyclerView.Adapter<moneyAdapter.ViewHolder>(){
+    class ViewHolder(itemview: View): RecyclerView.ViewHolder(itemview) {
+        val textViewCategory = itemView.findViewById<TextView>(R.id.Category_text)
+        val textViewPrice = itemView.findViewById<TextView>(R.id.Price_text)
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) {
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.money_item, parent,false)
+    }
 
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val v = LayoutInflater.from(parent?.context).inflate(R.layout.money_item, parent, false)
         return ViewHolder(v)
     }
 
-    override fun getItemCount(): Int {
-        return moneyList.size
+    override fun getItemCount(): Int = moneyList.size
+
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val money: Money = moneyList[position]
+
+        holder.textViewCategory.text = money.category
+        holder.textViewPrice.text = money.price
     }
 
-    override fun onBindViewHolder(holder: Adapter.ViewHolder, position: Int) {
-        holder.category.text = item[position]
-       /* holder.price.text = item[position]*/
-    }
-
-    class ViewHolder(val textView: View): RecyclerView.ViewHolder(textView) {
-        val textViewWork = itemView.findViewById<TextView>(R.id.)
-        val textViewDate = itemView.findViewById<TextView>(R.id.date_text)
-    }
 
 }
