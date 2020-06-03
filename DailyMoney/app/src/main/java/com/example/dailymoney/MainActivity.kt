@@ -16,7 +16,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val bottomNavigation: BottomNavigationView = findViewById(R.id.navigationView)
-//        val categoryInput: ArrayList<String> = ArrayList()
 
         supportFragmentManager.beginTransaction().replace(R.id.frameLayout, home()).commit()
 
