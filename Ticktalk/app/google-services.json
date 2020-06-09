@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "623005532920",
+    "firebase_url": "https://ticktalk-339c8.firebaseio.com",
+    "project_id": "ticktalk-339c8",
+    "storage_bucket": "ticktalk-339c8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:623005532920:android:ffda015eb04eade455710d",
+        "android_client_info": {
+          "package_name": "com.example.ticktalk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "623005532920-dgivcn0s8t297f1sj169fds6dckn9dne.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ticktalk",
+            "certificate_hash": "8ed080ebf2dfee920a353eaddc112519396c12ed"
+          }
+        },
+        {
+          "client_id": "623005532920-sfrrmvd4vgqe4fklq9a379b4ch6p7ecc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWjK-iYojE7gQRqbBSyaykt7uB8WesA0E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "623005532920-sfrrmvd4vgqe4fklq9a379b4ch6p7ecc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
