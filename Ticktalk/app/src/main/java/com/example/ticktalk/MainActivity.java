@@ -3,18 +3,18 @@ package com.example.ticktalk;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 
 import android.content.DialogInterface;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.widget.LinearLayout;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.BuildConfig;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,39 +28,37 @@ public class MainActivity extends AppCompatActivity {
 
         linearLayout = findViewById(R.id.mainactivity_linearlayout);
 
-        //Firebase
-        /*FirebaseRemoteConfigSettings configSettings = new FirebaseRemoteConfigSettings.Builder()
+        mFirebaseRemoteConfig = FirebaseRemoteConfig.getInstance();
+        FirebaseRemoteConfigSettings configSettings = new FirebaseRemoteConfigSettings.Builder()
+/*
                 .setDeveloperModeEnabled(BuildConfig.DEBUG)
+*/
                 .setMinimumFetchIntervalInSeconds(0)
                 .build();
-        mFirebaseRemoteConfig.setConfigSettings(configSettings);
-        mFirebaseRemoteConfig.setDefaults(R.xml.default_config);
+        mFirebaseRemoteConfig.setConfigSettingsAsync(configSettings);
+        mFirebaseRemoteConfig.setDefaultsAsync(R.xml.remote_config_defaults);
 
         mFirebaseRemoteConfig.fetchAndActivate()
                 .addOnCompleteListener(this, new OnCompleteListener<Boolean>() {
                     @Override
                     public void onComplete(@NonNull Task<Boolean> task) {
                         if (task.isSuccessful()) {
-                            boolean updated = task.getResult();
 
                         } else {
-
                         }
                         displayMessage();
                     }
-                });*/
-
+                });
     }
 
-    //Firebase
-    /*void displayMessage(){
+    void displayMessage() {
         String main_background = mFirebaseRemoteConfig.getString("main_background");
         boolean caps = mFirebaseRemoteConfig.getBoolean("main_message_caps");
         String main_message = mFirebaseRemoteConfig.getString("main_message");
 
-        linearLayout.setBackground(Color.parseColor(main_background));
 
-        if(caps){
+
+        if(caps) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setMessage(main_message).setPositiveButton("확인", new DialogInterface.OnClickListener() {
                 @Override
@@ -68,7 +66,9 @@ public class MainActivity extends AppCompatActivity {
                     finish();
                 }
             });
+
             builder.create().show();
         }
-    }*/
+
+    }
 }

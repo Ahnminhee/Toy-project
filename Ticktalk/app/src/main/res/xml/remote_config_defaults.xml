@@ -7,7 +7,7 @@
     </entry>
     <entry>
         <key>main_message_caps</key>
-        <value>false</value>
+        <value>true</value>
     </entry>
     <entry>
         <key>main_message</key>
@@ -15,4 +15,3 @@
     </entry>
 </defaultsMap>
     <!-- END xml_defaults -->
-
