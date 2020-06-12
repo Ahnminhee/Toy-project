@@ -58,20 +58,24 @@ public class MainActivity extends AppCompatActivity {
     private RecognitionListener listener = new RecognitionListener() {
         @Override
         public void onReadyForSpeech(Bundle params) {
-            Toast.makeText(getApplicationContext(),"음성인식 시작!.",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "음성인식 시작!.", Toast.LENGTH_SHORT).show();
         }
 
         @Override
-        public void onBeginningOfSpeech() {} //말하기 시작했을 때 호출
+        public void onBeginningOfSpeech() {
+        } //말하기 시작했을 때 호출
 
         @Override
-        public void onRmsChanged(float rmsdB) {} //소리 크기
+        public void onRmsChanged(float rmsdB) {
+        } //소리 크기
 
         @Override
-        public void onBufferReceived(byte[] buffer) {} // 인식한 단어를 buffer에 담기
+        public void onBufferReceived(byte[] buffer) {
+        } // 인식한 단어를 buffer에 담기
 
         @Override
-        public void onEndOfSpeech() {} //말하기를 중지할 때 호출
+        public void onEndOfSpeech() {
+        } //말하기를 중지할 때 호출
 
         @Override
         public void onError(int error) {
@@ -110,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
                     break;
             }
 
-            Toast.makeText(getApplicationContext(), "에러가 발생하였습니다. : " + message,Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "에러가 발생하였습니다. : " + message, Toast.LENGTH_SHORT).show();
         }
 
         @Override
@@ -118,15 +122,17 @@ public class MainActivity extends AppCompatActivity {
             ArrayList<String> matches =
                     results.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
 
-            for(int i= 0 ; i<matches.size() ; i++){
+            for (int i = 0; i < matches.size(); i++) {
                 textView.setText(matches.get(i));
             }
         }
 
         @Override
-        public void onPartialResults(Bundle partialResults) {}
+        public void onPartialResults(Bundle partialResults) {
+        }
 
         @Override
-        public void onEvent(int eventType, Bundle params) {}
+        public void onEvent(int eventType, Bundle params) {
+        }
     };
 }
