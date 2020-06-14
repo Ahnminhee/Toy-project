@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Ticktalk</string>
+    <string name="loginBtn">loginactivity_button_login</string>
 </resources>

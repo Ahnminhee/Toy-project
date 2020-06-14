@@ -3,11 +3,11 @@
 <defaultsMap>
     <entry>
         <key>main_background</key>
-        <value>#ffffff</value>
+        <value>#000000</value>
     </entry>
     <entry>
         <key>main_message_caps</key>
-        <value>false</value>
+        <value>true</value>
     </entry>
     <entry>
         <key>main_message</key>

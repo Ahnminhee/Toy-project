@@ -8,12 +8,20 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:128453577087:android:20976b9c167cb3e014324a",
+        "mobilesdk_app_id": "1:128453577087:android:111a3eb71d54d08414324a",
         "android_client_info": {
           "package_name": "com.example.ticktalk"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "128453577087-ha5qvqjipt268m9loci2udu28cg8ncvb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ticktalk",
+            "certificate_hash": "8ed080ebf2dfee920a353eaddc112519396c12ed"
+          }
+        },
         {
           "client_id": "128453577087-jqr5tnk3v7iudd6iu4n1lh6ndrs0ibo7.apps.googleusercontent.com",
           "client_type": 3
