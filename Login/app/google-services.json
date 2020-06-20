@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "128453577087",
+    "firebase_url": "https://ticktalk-55777.firebaseio.com",
+    "project_id": "ticktalk-55777",
+    "storage_bucket": "ticktalk-55777.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:128453577087:android:20976b9c167cb3e014324a",
+        "android_client_info": {
+          "package_name": "com.example.ticktalk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "128453577087-jqr5tnk3v7iudd6iu4n1lh6ndrs0ibo7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCK-PR_9P6K9kmp4HglXrOZWW2PwR9NOk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "128453577087-jqr5tnk3v7iudd6iu4n1lh6ndrs0ibo7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

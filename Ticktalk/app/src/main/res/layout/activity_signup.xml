@@ -5,7 +5,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".SignupActivity">
+    tools:context=".SighupActivity">
+
+    <ImageView
+        android:id = "@+id/signupactivity_ImageView_profile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="50dp"
+        android:src = "@android:drawable/ic_menu_mapmode"/>
     
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
