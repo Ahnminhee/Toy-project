@@ -6,8 +6,9 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
+
 import android.widget.LinearLayout;
+
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -29,15 +30,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        linearLayout = findViewById(R.id.mainactivity_linearlayout);
+
+
+        linearLayout = findViewById(R.id.mainactivity_linearlayout);ㅋ
 
         mFirebaseRemoteConfig = FirebaseRemoteConfig.getInstance();
         FirebaseRemoteConfigSettings configSettings = new FirebaseRemoteConfigSettings.Builder()
                 .setDeveloperModeEnabled(BuildConfig.DEBUG)
                 .setMinimumFetchIntervalInSeconds(0)
                 .build();
-        mFirebaseRemoteConfig.setConfigSettingsAsync(configSettings);
-        mFirebaseRemoteConfig.setDefaultsAsync(R.xml.remote_config_defaults);
+        ((FirebaseRemoteConfig) mFirebaseRemoteConfig).setConfigSettingsAsync(configSettings);
+        ((FirebaseRemoteConfig) mFirebaseRemoteConfig).setDefaultsAsync(R.xml.remote_config_defaults);
 
         mFirebaseRemoteConfig.fetchAndActivate()
                 .addOnCompleteListener(this, new OnCompleteListener<Boolean>() {

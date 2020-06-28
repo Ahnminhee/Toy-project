@@ -8,9 +8,17 @@
     android:background="#FDE992"
     tools:context=".MainActivity">
 
+
+
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@android:drawable/ic_menu_mapmode"/>
+
+    <Button
+        android:id = "@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:Text = "클릭!"/>
 
 </LinearLayout>
