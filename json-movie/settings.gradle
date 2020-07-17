@@ -1,0 +1,2 @@
+rootProject.name='Json-movie'
+include ':app'

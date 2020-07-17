@@ -21,6 +21,7 @@
         android:layout_weight="1"
         android:layout_margin="10dp"
         android:layout_gravity="bottom|right"
+        android:onClick="changeActivity"
         android:clickable="true"
         app:srcCompat="@android:drawable/ic_menu_add" />
 </LinearLayout>

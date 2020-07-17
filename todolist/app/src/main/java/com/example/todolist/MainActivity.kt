@@ -18,27 +18,25 @@ class MainActivity : AppCompatActivity() {
 
         val mainWork = ArrayList<Work>()
 
-        val fab: View = findViewById(R.id.fab)
+        var getWork = intent.getStringExtra("work")
+        var getPeriod = intent.getStringExtra("date")
 
-        fab.setOnClickListener {
-            val intent = Intent(this@MainActivity, AddWork::class.java)
-            startActivity(intent)
-        }
 
-        var getWork= intent.getStringExtra("work")
-        var getPeriod= intent.getStringExtra("date")
-
-        if(getWork == null || getPeriod == null) {
+        if (getWork == null || getPeriod == null) {
             println("")
-        } else{
-            mainWork.add(Work(getWork,getPeriod))
-
-            val adapter=Adapter(mainWork)
-
+        } else {
+            mainWork.add(Work(getWork, getPeriod))
+            var adapter = Adapter(mainWork)
             recyclerView.adapter = adapter
 
         }
-
     }
 
+    fun changeActivity(view: View) {
+        val intent = Intent(this@MainActivity, AddWork::class.java)
+        startActivity(intent)
+    }
+
+
 }
+
