@@ -29,8 +29,8 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Vi
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Restaurant item = items.get(position);
         holder.setItem(item);
-    }
 
+}
     @Override
     public int getItemCount() {
         return items.size();

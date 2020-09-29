@@ -21,9 +21,6 @@ public class MainActivity extends AppCompatActivity {
     private mapPage mapFragment = new mapPage();
     private userPage userFragment = new userPage();
 
-    ImageButton koreanFood;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
